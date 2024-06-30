@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>API Google books</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+
+
+<body>
+  <!-- inicio menu -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-translucent">
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto"></ul>
+      <form class="form-inline my-2 my-lg-0" style="margin-left: 50px; width: 30%;">
+        <input id="textinput" name="textinput" value="" type="text" class="form-control mr-sm-2" type="search"
+          placeholder="Pesquisar livro" aria-label="Pesquisar livro" />
+      </form>
+      <button style="margin-left: 100px;" class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="Busca()"
+        ;>
+        Buscar
+      </button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="Limpar()" style="margin-left: 20px;">
+        Limpar
+      </button>
+
+
+    </div>
+  </nav>
+
+  <!-- inicio div livros -->
+
+
+  <div class="modal fade bd-example-modal-lg0 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="container">
+          <div class="row">
+
+            <center>
+              <div class="col-9">
+                <h1 id="0t"></h1>
+              </div>
+            </center>
+            <div class="col-4"><img id="0f" style=" min-height:  500px; "></div>
+            <div class="col-6">
+              <p id="0m">
+              <p id="0d"></p>
+              <div class="container text-center">
+                <div class="row">
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix">
+
+
+
+        </p>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="row">
+          <center>
+            <div class="col-9">
+              <h1 id="1t"></h1>
+            </div>
+          </center>
+          <div class="col-4"><img id="1f" style=" min-height:  500px; "></div>
+          <div class="col-6">
+            <p id="1m">
+            <p id="1d"></p>
+
+            <div class="container text-center">
+              <div class="row">
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="clearfix">
+
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="row">
+          <center>
+            <div class="col-9">
+              <h1 id="2t"></h1>
+            </div>
+          </center>
+          <div class="col-4"><img id="2f" style=" min-height:  500px; max-width:  330px;  "></div>
+          <div class="col-6">
+            <p id="2m">
+            <p id="2d"></p>
+            <div class="container text-center">
+              <div class="row">
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix">
+
+  </div>
+  </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="clearfix">
+          <div class="row">
+            <center>
+              <div class="col-9">
+                <h1 id="3t"></h1>
+              </div>
+            </center>
+            <div class="col-4"><img id="3f" style=" min-height:  500px; max-width:  330px;  "></div>
+            <div class="col-6">
+              <p id="3m">
+              <p id="3d"></p>
+              <div class="container text-center">
+                <div class="row">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="clearfix">
+          <div class="row">
+            <center>
+              <div class="col-9">
+                <h1 id="4t"></h1>
+              </div>
+            </center>
+            <div class="col-4"><img id="4f" style=" min-height:  500px; max-width:  330px;  "></div>
+            <div class="col-6">
+              <p id="4m">
+              <p id="4d"></p>
+              <div class="container text-center">
+                <div class="row">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  </div>
+  </div>
+  <div class="modal fade bd-example-modal-lg5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="clearfix">
+          <div class="row">
+            <center>
+              <div class="col-9">
+                <h1 id="5t"></h1>
+              </div>
+            </center>
+            <div class="col-4"><img id="5f" style=" min-height:  500px;  max-width:  330px; "></div>
+            <div class="col-6">
+              <p id="5m">
+              <p id="5d"></p>
+              <div class="container text-center">
+                <div class="row">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  </div>
+  </div>
+  <div class="modal fade bd-example-modal-lg6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="clearfix">
+          <div class="row">
+            <center>
+              <div class="col-9">
+                <h1 id="6t"></h1>
+              </div>
+            </center>
+            <div class="col-4"><img id="6f" style=" min-height:  500px; max-width:  330px;  "></div>
+            <div class="col-6">
+              <p id="6m">
+              <p id="6d"></p>
+              <div class="container text-center">
+                <div class="row">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+  <div class="modal fade bd-example-modal-lg7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="clearfix">
+          <div class="row">
+            <center>
+              <div class="col-9">
+                <h1 id="7t"></h1>
+              </div>
+            </center>
+            <div class="col-4"><img id="7f" style=" min-height:  500px; max-width:  330px;  "></div>
+            <div class="col-6">
+              <p id="7m">
+              <p id="7d"></p>
+              <div class="container text-center">
+                <div class="row">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+  <div class="modal fade bd-example-modal-lg8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="clearfix">
+          <div class="row">
+            <center>
+              <div class="col-9">
+                <h1 id="8t"></h1>
+              </div>
+            </center>
+            <div class="col-4"><img id="8f" style="min-height:  500px; max-width:  330px; "></div>
+            <div class="col-6">
+              <p id="8m">
+              <p id="8d"></p>
+              <div class="container text-center">
+                <div class="row">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+  </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg9 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <div class="clearfix">
+          <div class="row">
+            <center>
+              <div class="col-9">
+                <h1 id="9t"></h1>
+              </div>
+            </center>
+            <div class="col-4"><img id="9f" style=" min-height:  500px; max-width:  330px; "></div>
+            <div class="col-6">
+              <p id="9m">
+              <p id="9d"></p>
+              <div class="container text-center">
+                <div class="row">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+  <!-- modal -->
+
+
+
+
+
+
+  <div class="container text-center" style="display:none" id="div">
+    <div class="row row-cols-4">
+
+      <button type="button" onclick="zero()" data-toggle="modal" data-target=".bd-example-modal-lg0" class="botoes">
+        <div class="col">
+          <img id="0" />
+          <p id="0p"></p>
+        </div>
+      </button>
+
+      <button type="button" onclick="um()" data-toggle="modal" data-target=".bd-example-modal-lg1" class="botoes">
+        <div class="col">
+          <img id="1" />
+          <p id="1p"></p>
+        </div>
+      </button>
+      <button type="button" onclick="dois()" data-toggle="modal" data-target=".bd-example-modal-lg2" class="botoes">
+        <div class="col">
+          <img id="2" />
+          <p id="2p"></p>
+        </div>
+      </button>
+      <button type="button" onclick="tres()" data-toggle="modal" data-target=".bd-example-modal-lg3" class="botoes">
+        <div class="col">
+          <img id="3" />
+          <p id="3p"></p>
+        </div>
+      </button>
+      <button type="button" onclick="quatro()" data-toggle="modal" data-target=".bd-example-modal-lg4" class="botoes">
+        <div class="col">
+          <img id="4" />
+          <p id="4p"></p>
+        </div>
+      </button>
+      <button type="button" onclick="cinco()" data-toggle="modal" data-target=".bd-example-modal-lg5" class="botoes">
+        <div class="col">
+          <img id="5" />
+          <p id="5p"></p>
+        </div>
+      </button>
+
+      <button type="button" onclick="seis()" data-toggle="modal" data-target=".bd-example-modal-lg6" class="botoes">
+        <div class="col">
+          <img id="6" />
+          <p id="6p"></p>
+        </div>
+      </button>
+      <button type="button" onclick="sete()" data-toggle="modal" data-target=".bd-example-modal-lg7" class="botoes">
+        <div class="col">
+          <img id="7" />
+          <p id="7p"></p>
+        </div>
+      </button>
+      <button type="button" onclick="oito()" data-toggle="modal" data-target=".bd-example-modal-lg8" class="botoes">
+        <div class="col">
+          <img id="8" />
+          <p id="8p"></p>
+        </div>
+      </button>
+      <button type="button" onclick="nove()" data-toggle="modal" data-target=".bd-example-modal-lg9" class="botoes">
+        <div class="col">
+          <img id="9" />
+          <p id="9p"></p>
+        </div>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- inicio div -->
+  <script src="script.js"></script>
+
+  <script id="resposta"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+
+  <center>
+    <footer>
+      <p id="resul"></p>
+    </footer>
+  </center>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0); /* Alterei para white para melhorar a legibilidade com o fundo preto */
+}
+
+.form2 {
+    max-width: 50%;
+    position: fixed;
+    /* float: left; */ /* Removido pois não está sendo utilizado */
+}
+
+.form {
+    max-width: 40%;
+    position: absolute;
+    top: 50%;
+    /* float: left; */ /* Removido pois não está sendo utilizado */
+}
+
+.botoes {
+    border: 0.5px;
+    background-color: rgba(255, 255, 255, 0) !important;
+  }
+
+ 
